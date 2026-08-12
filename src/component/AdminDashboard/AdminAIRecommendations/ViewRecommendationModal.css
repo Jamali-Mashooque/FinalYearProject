@@ -1,0 +1,260 @@
+/* =========================================
+   Overlay
+========================================= */
+
+.view-recommendation-overlay {
+  position: fixed;
+  inset: 0;
+
+  background: rgba(15, 23, 42, 0.55);
+  backdrop-filter: blur(4px);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 30px;
+
+  z-index: 9999;
+}
+
+/* =========================================
+   Modal
+========================================= */
+
+.view-recommendation-modal {
+  width: 100%;
+  max-width: 900px;
+
+  max-height: 90vh;
+
+  background: #fff;
+
+  border-radius: 22px;
+
+  overflow-y: auto;
+
+  box-shadow: 0 20px 60px rgba(0, 0, 0, .15);
+
+  animation: modalShow .3s ease;
+}
+
+/* =========================================
+   Scrollbar
+========================================= */
+
+.view-recommendation-modal::-webkit-scrollbar {
+  width: 8px;
+}
+
+.view-recommendation-modal::-webkit-scrollbar-thumb {
+  background: #3b82f6;
+  border-radius: 20px;
+}
+
+.view-recommendation-modal::-webkit-scrollbar-track {
+  background: #f3f4f6;
+}
+
+/* =========================================
+   Header
+========================================= */
+
+.view-recommendation-header {
+  position: sticky;
+  top: 0;
+
+  background: #fff;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 22px 30px;
+
+  border-bottom: 1px solid #edf2f7;
+
+  z-index: 100;
+}
+
+.view-recommendation-header h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.view-recommendation-header button {
+  width: 42px;
+  height: 42px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: #f1f5f9;
+
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: .3s;
+}
+
+.view-recommendation-header button svg {
+  font-size: 16px;
+}
+
+.view-recommendation-header button:hover {
+  background: #ef4444;
+  color: #fff;
+}
+
+/* =========================================
+   Body
+========================================= */
+
+.view-recommendation-body {
+  padding: 30px;
+}
+
+/* =========================================
+   Grid
+========================================= */
+
+.recommendation-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+
+  margin-bottom: 24px;
+}
+
+/* =========================================
+   Card
+========================================= */
+
+.recommendation-item {
+  background: #fff;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 16px;
+
+  padding: 18px 20px;
+
+  transition: .25s;
+}
+
+.recommendation-item:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 8px 25px rgba(0,0,0,.06);
+}
+
+/* =========================================
+   Full Width
+========================================= */
+
+.full-width {
+  width: 100%;
+
+  margin-bottom: 22px;
+}
+
+/* =========================================
+   Labels
+========================================= */
+
+.recommendation-item label {
+  display: block;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  color: #64748b;
+
+  margin-bottom: 10px;
+}
+
+/* =========================================
+   Values
+========================================= */
+
+.recommendation-item p {
+  font-size: 17px;
+
+  color: #1e293b;
+
+  line-height: 1.8;
+
+  word-break: break-word;
+}
+
+/* =========================================
+   Animation
+========================================= */
+
+@keyframes modalShow {
+
+  from {
+
+    opacity: 0;
+
+    transform: scale(.9);
+
+  }
+
+  to {
+
+    opacity: 1;
+
+    transform: scale(1);
+
+  }
+
+}
+
+/* =========================================
+   Responsive
+========================================= */
+
+@media (max-width:768px) {
+
+  .view-recommendation-overlay {
+
+    padding: 15px;
+
+  }
+
+  .view-recommendation-modal {
+
+    max-height: 95vh;
+
+  }
+
+  .recommendation-grid {
+
+    grid-template-columns: 1fr;
+
+  }
+
+  .view-recommendation-body {
+
+    padding: 20px;
+
+  }
+
+  .view-recommendation-header {
+
+    padding: 18px 20px;
+
+  }
+
+  .view-recommendation-header h2 {
+
+    font-size: 20px;
+
+  }
+
+}

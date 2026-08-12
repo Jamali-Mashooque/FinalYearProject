@@ -1,0 +1,143 @@
+/* =====================================
+   CHAT AREA
+===================================== */
+
+.chat-messages{
+
+    flex:1;
+
+    overflow-y:auto;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:30px;
+
+    padding:40px 12%;
+
+    scroll-behavior:smooth;
+
+}
+
+/* Scroll */
+
+.chat-messages::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+.chat-messages::-webkit-scrollbar-track{
+
+    background:transparent;
+
+}
+
+.chat-messages::-webkit-scrollbar-thumb{
+
+    background:#d1d5db;
+
+    border-radius:20px;
+
+}
+
+.chat-messages::-webkit-scrollbar-thumb:hover{
+
+    background:#9ca3af;
+
+}
+
+/* bottom spacing */
+
+.chat-messages::after{
+
+    content:"";
+
+    height:30px;
+
+    flex-shrink:0;
+
+}
+
+/* ==========================
+   Desktop
+========================== */
+
+@media(max-width:1400px){
+
+.chat-messages{
+
+padding:35px 9%;
+
+}
+
+}
+
+/* ==========================
+   Laptop
+========================== */
+
+@media(max-width:1200px){
+
+.chat-messages{
+
+padding:30px 7%;
+
+}
+
+}
+
+/* ==========================
+   Tablet
+========================== */
+
+@media(max-width:992px){
+
+.chat-messages{
+
+padding:25px;
+
+gap:24px;
+
+}
+
+}
+
+/* ==========================
+   Mobile
+========================== */
+
+@media(max-width:768px){
+
+.chat-messages{
+
+padding:18px 15px;
+
+gap:18px;
+
+}
+
+.chat-messages::after{
+
+height:15px;
+
+}
+
+}
+
+/* ==========================
+   Small Mobile
+========================== */
+
+@media(max-width:480px){
+
+.chat-messages{
+
+padding:12px;
+
+gap:15px;
+
+}
+
+}

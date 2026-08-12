@@ -1,0 +1,266 @@
+/* ==========================================
+   Skill Section
+========================================== */
+
+.skill-section{
+    display:flex;
+    flex-direction:column;
+    gap:30px;
+}
+
+/* ==========================================
+   Card
+========================================== */
+
+.skill-group,
+.form-group{
+    background:#ffffff;
+    border:1px solid #e8eef7;
+    border-radius:18px;
+    padding:24px;
+    box-shadow:0 10px 30px rgba(20,40,80,.05);
+}
+
+.skill-group h3{
+    margin:0 0 8px;
+    font-size:22px;
+    color:#1e293b;
+}
+
+.skill-description{
+    color:#64748b;
+    font-size:14px;
+    margin-bottom:18px;
+    line-height:1.6;
+}
+
+/* ==========================================
+   Suggestion Chips
+========================================== */
+
+.suggestion-row{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-bottom:18px;
+}
+
+.suggestion-chip{
+    border:none;
+    outline:none;
+    cursor:pointer;
+
+    padding:9px 16px;
+
+    border-radius:999px;
+
+    background:#eef4ff;
+
+    color:#2563eb;
+
+    font-weight:600;
+
+    transition:.25s;
+}
+
+.suggestion-chip:hover{
+    background:#2563eb;
+    color:#fff;
+    transform:translateY(-2px);
+}
+
+.active-chip{
+    background:#2563eb;
+    color:#fff;
+}
+
+/* ==========================================
+   Input + Add Button
+========================================== */
+
+.input-wrapper{
+    position:relative;
+    width:100%;
+}
+
+.input-wrapper input{
+    width:100%;
+    height:52px;
+
+    padding:0 95px 0 16px;
+
+    border:1px solid #d7dce5;
+
+    border-radius:12px;
+
+    font-size:15px;
+
+    transition:.25s;
+
+    outline:none;
+}
+
+.input-wrapper input:focus{
+    border-color:#2563eb;
+    box-shadow:0 0 0 4px rgba(37,99,235,.12);
+}
+
+.add-btn{
+    position:absolute;
+
+    top:50%;
+    right:8px;
+
+    transform:translateY(-50%);
+
+    height:38px;
+
+    padding:0 18px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#2563eb;
+
+    color:#fff;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.25s;
+}
+
+.add-btn:hover{
+    background:#1d4ed8;
+}
+
+/* ==========================================
+   Added Tags
+========================================== */
+
+/* ==========================================
+   Added Skills
+========================================== */
+
+.selected-items{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-top:18px;
+}
+
+.selected-chip{
+    display:flex;
+    align-items:center;
+    gap:8px;
+
+    padding:8px 14px;
+
+    background:#29e1ee;
+    color:#fff;
+
+    border-radius:30px;
+
+    font-size:14px;
+    font-weight:600;
+}
+
+.selected-chip span{
+    width:20px;
+    height:20px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+
+    cursor:pointer;
+
+    background:rgba(255,255,255,.2);
+
+    font-size:15px;
+    font-weight:bold;
+
+    transition:.2s;
+}
+
+.selected-chip span:hover{
+    background:#ae3838;
+}
+/* ==========================================
+   Experience
+========================================== */
+
+.form-group label{
+    display:block;
+    margin-bottom:10px;
+    font-weight:600;
+    color:#1e293b;
+}
+
+.form-group select{
+    width:100%;
+    height:52px;
+
+    border:1px solid #d7dce5;
+
+    border-radius:12px;
+
+    padding:0 16px;
+
+    font-size:15px;
+
+    outline:none;
+
+    transition:.25s;
+}
+
+.form-group select:focus{
+    border-color:#2563eb;
+    box-shadow:0 0 0 4px rgba(37,99,235,.12);
+}
+
+/* ==========================================
+   Responsive
+========================================== */
+
+@media(max-width:768px){
+
+    .skill-group,
+    .form-group{
+        padding:18px;
+    }
+
+    .skill-group h3{
+        font-size:20px;
+    }
+
+    .suggestion-row{
+        gap:8px;
+    }
+
+    .suggestion-chip{
+        font-size:13px;
+        padding:8px 14px;
+    }
+
+    .input-wrapper input{
+        height:48px;
+        padding-right:85px;
+    }
+
+    .add-btn{
+        height:34px;
+        padding:0 15px;
+        font-size:13px;
+    }
+
+    .tag{
+        font-size:13px;
+        padding:8px 12px;
+    }
+
+}

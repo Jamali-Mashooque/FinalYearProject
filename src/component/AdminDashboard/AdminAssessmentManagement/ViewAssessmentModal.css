@@ -1,0 +1,161 @@
+/* =========================================
+   Overlay
+========================================= */
+
+.view-assessment-overlay{
+    position:fixed;
+    inset:0;
+    background:rgba(15,23,42,.55);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+    padding:30px;
+}
+
+/* =========================================
+   Modal
+========================================= */
+
+.view-assessment-modal{
+    width:700px;
+    max-width:100%;
+    max-height:90vh;
+    overflow-y:auto;
+    background:#fff;
+    border-radius:18px;
+    box-shadow:0 20px 60px rgba(0,0,0,.25);
+}
+
+/* =========================================
+   Header
+========================================= */
+
+.view-assessment-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:22px 28px;
+    border-bottom:1px solid #e2e8f0;
+    position:sticky;
+    top:0;
+    background:#fff;
+    z-index:10;
+}
+
+.view-assessment-header h2{
+    font-size:24px;
+    color:#1e293b;
+    margin:0;
+}
+
+.view-assessment-header button{
+    width:40px;
+    height:40px;
+    border:none;
+    border-radius:10px;
+    background:#f1f5f9;
+    color:#475569;
+    cursor:pointer;
+    transition:.3s;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:18px;
+}
+
+.view-assessment-header button:hover{
+    background:#2563eb;
+    color:#fff;
+}
+
+/* =========================================
+   Body
+========================================= */
+
+.view-assessment-body{
+    padding:28px;
+    display:grid;
+    gap:18px;
+}
+
+/* =========================================
+   Item
+========================================= */
+
+.assessment-item{
+    background:#f8fafc;
+    border:1px solid #e2e8f0;
+    border-radius:12px;
+    padding:18px;
+}
+
+.assessment-item label{
+    display:block;
+    font-size:13px;
+    font-weight:600;
+    color:#64748b;
+    margin-bottom:8px;
+    text-transform:uppercase;
+    letter-spacing:.5px;
+}
+
+.assessment-item p{
+    color:#1e293b;
+    font-size:15px;
+    line-height:1.7;
+    margin:0;
+    word-break:break-word;
+}
+
+/* =========================================
+   Scrollbar
+========================================= */
+
+.view-assessment-modal::-webkit-scrollbar{
+    width:8px;
+}
+
+.view-assessment-modal::-webkit-scrollbar-thumb{
+    background:#cbd5e1;
+    border-radius:10px;
+}
+
+.view-assessment-modal::-webkit-scrollbar-track{
+    background:transparent;
+}
+
+/* =========================================
+   Responsive
+========================================= */
+
+@media(max-width:768px){
+
+.view-assessment-overlay{
+    padding:15px;
+    align-items:flex-start;
+}
+
+.view-assessment-modal{
+    width:100%;
+    max-height:95vh;
+    margin-top:20px;
+}
+
+.view-assessment-header{
+    padding:18px;
+}
+
+.view-assessment-header h2{
+    font-size:20px;
+}
+
+.view-assessment-body{
+    padding:18px;
+}
+
+.assessment-item{
+    padding:15px;
+}
+
+}

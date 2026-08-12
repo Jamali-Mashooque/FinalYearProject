@@ -1,0 +1,428 @@
+/*==========================
+Admin Students
+==========================*/
+
+.admin-students{
+
+    width:100%;
+
+    animation:fade .3s ease;
+
+}
+
+/* Header */
+
+.students-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:25px;
+
+}
+
+.students-header h2{
+
+    font-size:30px;
+
+    color:#0f172a;
+
+    margin-bottom:6px;
+
+}
+
+.students-header p{
+
+    color:#64748b;
+
+}
+
+.students-header button{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    border:none;
+
+    background:#2563eb;
+
+    color:#fff;
+
+    padding:14px 22px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.students-header button:hover{
+
+    background:#1d4ed8;
+
+}
+
+/* Toolbar */
+
+.students-toolbar{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:25px;
+
+}
+
+/* Search */
+
+.students-search{
+
+    width:350px;
+
+    height:48px;
+
+    background:#fff;
+
+    border:1px solid #dbe3ef;
+
+    border-radius:12px;
+
+    display:flex;
+
+    align-items:center;
+
+    padding:0 15px;
+
+}
+
+.students-search svg{
+
+    color:#94a3b8;
+
+    margin-right:12px;
+
+}
+
+.students-search input{
+
+    width:100%;
+
+    border:none;
+
+    outline:none;
+
+    font-size:15px;
+
+    background:transparent;
+
+}
+
+/* Table */
+
+.students-table{
+
+    width:100%;
+
+    overflow-x:auto;
+
+    background:#fff;
+
+    border-radius:18px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.05);
+
+}
+
+.students-table table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    min-width:900px;
+
+}
+
+.students-table th{
+
+    background:#2563eb;
+
+    color:#fff;
+
+    padding:18px;
+
+    text-align:left;
+
+    font-size:15px;
+
+}
+
+.students-table td{
+
+    padding:18px;
+
+    border-bottom:1px solid #edf2f7;
+
+    color:#334155;
+
+}
+
+.students-table tr:hover{
+
+    background:#f8fafc;
+
+}
+
+/* Status */
+
+.status{
+
+    background:#dcfce7;
+
+    color:#16a34a;
+
+    padding:7px 16px;
+
+    border-radius:30px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+}
+
+/* Actions */
+
+.action-buttons{
+
+    display:flex;
+
+    gap:10px;
+
+}
+
+.action-buttons button{
+
+    width:40px;
+
+    height:40px;
+
+    border:none;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    transition:.3s;
+
+}
+
+.view{
+
+    background:#e0f2fe;
+
+    color:#0284c7;
+
+}
+
+.view:hover{
+
+    background:#0284c7;
+
+    color:#fff;
+
+}
+
+.edit{
+
+    background:#fef9c3;
+
+    color:#ca8a04;
+
+}
+
+.edit:hover{
+
+    background:#ca8a04;
+
+    color:#fff;
+
+}
+
+.delete{
+
+    background:#fee2e2;
+
+    color:#dc2626;
+
+}
+
+.delete:hover{
+
+    background:#dc2626;
+
+    color:#fff;
+
+}
+
+/* Animation */
+
+@keyframes fade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(15px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*==========================
+Responsive
+==========================*/
+
+@media(max-width:992px){
+
+.students-header{
+
+flex-direction:column;
+
+align-items:flex-start;
+
+gap:20px;
+
+}
+
+.students-toolbar{
+
+flex-direction:column;
+
+align-items:flex-start;
+
+gap:15px;
+
+}
+
+.students-search{
+
+width:100%;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.students-header h2{
+
+font-size:25px;
+
+}
+
+.students-header button{
+
+width:100%;
+
+justify-content:center;
+
+}
+
+.students-table{
+
+border-radius:12px;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.admin-students{
+
+padding-bottom:20px;
+
+}
+
+.students-header h2{
+
+font-size:22px;
+
+}
+
+.students-header p{
+
+font-size:14px;
+
+}
+
+.students-search{
+
+height:45px;
+
+}
+
+.students-table th,
+
+.students-table td{
+
+padding:14px;
+
+font-size:14px;
+
+}
+
+.action-buttons{
+
+gap:6px;
+
+}
+
+.action-buttons button{
+
+width:35px;
+
+height:35px;
+
+}
+
+}
+.status.active {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.status.pending {
+  background: #fef3c7;
+  color: #b45309;
+}

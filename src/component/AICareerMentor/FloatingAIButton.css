@@ -1,0 +1,87 @@
+.floating-ai-btn{
+
+    position:fixed;
+
+    right:30px;
+
+    bottom:30px;
+
+    width:68px;
+
+    height:68px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:linear-gradient(135deg,#4F46E5,#7C3AED);
+
+    color:#fff;
+
+    font-size:28px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    cursor:pointer;
+
+    z-index:9999;
+
+    box-shadow:0 18px 45px rgba(79,70,229,.35);
+
+    transition:.3s;
+
+}
+
+.floating-ai-btn:hover{
+
+    transform:translateY(-6px) scale(1.05);
+
+    box-shadow:0 25px 60px rgba(79,70,229,.45);
+
+}
+
+.floating-ai-btn:active{
+
+    transform:scale(.96);
+
+}
+
+@media(max-width:768px){
+
+.floating-ai-btn{
+
+right:18px;
+
+bottom:18px;
+
+width:58px;
+
+height:58px;
+
+font-size:22px;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.floating-ai-btn{
+
+right:15px;
+
+bottom:15px;
+
+width:54px;
+
+height:54px;
+
+font-size:20px;
+
+}
+
+}

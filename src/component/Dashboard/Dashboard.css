@@ -1,0 +1,124 @@
+.dashboard-container {
+  display: flex;
+  height: 100vh;
+  background: #f8fafc;
+  overflow: hidden;
+  position: relative;
+}
+
+/* ==========================================
+   Sidebar Overlay
+========================================== */
+
+.sidebar-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 998;
+  display: none;
+}
+
+/* ==========================================
+   Main
+========================================== */
+
+.dashboard-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  width: 100%;
+}
+
+/* ==========================================
+   Normal Pages
+========================================== */
+
+.dashboard-content {
+  flex: 1;
+  overflow-y: auto;
+  background: #f8fafc;
+  padding: 25px;
+  transition: 0.3s;
+}
+
+.dashboard-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.dashboard-content::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 20px;
+}
+
+.dashboard-content::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
+
+/* ==========================================
+   AI Mentor
+========================================== */
+
+.dashboard-content.mentor-page {
+  padding: 0;
+  background: #fff;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ==========================================
+   Large Tablet
+========================================== */
+
+@media (max-width: 1200px) {
+  .dashboard-content {
+    padding: 20px;
+  }
+}
+
+/* ==========================================
+   Tablet
+========================================== */
+
+@media (max-width: 992px) {
+  .dashboard-content {
+    padding: 18px;
+  }
+}
+
+/* ==========================================
+   Mobile
+========================================== */
+
+@media (max-width: 768px) {
+  .dashboard-container {
+    overflow: hidden;
+  }
+
+  .sidebar-overlay {
+    display: block;
+  }
+
+  .dashboard-main {
+    width: 100%;
+  }
+
+  .dashboard-content {
+    padding: 15px;
+  }
+
+  .dashboard-content.mentor-page {
+    padding: 0;
+  }
+}
+
+/* ==========================================
+   Small Mobile
+========================================== */
+
+@media (max-width: 480px) {
+  .dashboard-content {
+    padding: 12px;
+  }
+}

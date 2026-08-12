@@ -1,0 +1,193 @@
+/*==================================
+Progress Bar
+==================================*/
+
+.progress-container{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-start;
+
+    margin:35px 0 45px;
+
+    position:relative;
+
+}
+
+.progress-step{
+
+    flex:1;
+
+    text-align:center;
+
+    position:relative;
+
+}
+
+.circle{
+
+    width:46px;
+
+    height:46px;
+
+    border-radius:50%;
+
+    border:2px solid #d1d5db;
+
+    background:#fff;
+
+    color:#64748b;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    margin:0 auto;
+
+    font-weight:700;
+
+    font-size:16px;
+
+    transition:.3s;
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+.circle.active{
+
+    background:#2563eb;
+
+    border-color:#2563eb;
+
+    color:#fff;
+
+}
+
+.progress-step p{
+
+    margin-top:12px;
+
+    font-size:14px;
+
+    color:#64748b;
+
+    font-weight:500;
+
+}
+
+.circle.active + p{
+
+    color:#2563eb;
+
+    font-weight:600;
+
+}
+
+.line{
+
+    position:absolute;
+
+    top:22px;
+
+    left:50%;
+
+    width:100%;
+
+    height:3px;
+
+    background:#dbe4ee;
+
+    z-index:1;
+
+}
+
+.line.active{
+
+    background:#2563eb;
+
+}
+
+/*==================================
+Responsive
+==================================*/
+
+@media(max-width:768px){
+
+.progress-container{
+
+overflow-x:auto;
+
+padding-bottom:10px;
+
+gap:20px;
+
+}
+
+.progress-step{
+
+min-width:100px;
+
+}
+
+.circle{
+
+width:40px;
+
+height:40px;
+
+font-size:14px;
+
+}
+
+.progress-step p{
+
+font-size:13px;
+
+}
+
+.line{
+
+top:19px;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.progress-step{
+
+min-width:90px;
+
+}
+
+.circle{
+
+width:36px;
+
+height:36px;
+
+font-size:13px;
+
+}
+
+.progress-step p{
+
+font-size:12px;
+
+}
+
+.line{
+
+top:17px;
+
+}
+
+}

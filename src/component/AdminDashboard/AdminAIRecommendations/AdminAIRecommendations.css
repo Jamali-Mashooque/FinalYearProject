@@ -1,0 +1,582 @@
+/*=========================================
+AI Recommendation Management
+=========================================*/
+
+.recommendation-page{
+
+    width:100%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:28px;
+
+    animation:fadeIn .35s ease;
+
+}
+
+/*=========================================
+Header
+=========================================*/
+
+.recommendation-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:20px;
+
+}
+
+.recommendation-header h1{
+
+    font-size:32px;
+
+    color:#1e293b;
+
+    font-weight:700;
+
+    margin-bottom:6px;
+
+}
+
+.recommendation-header p{
+
+    color:#64748b;
+
+    font-size:15px;
+
+}
+
+/*=========================================
+Search
+=========================================*/
+
+.search-box{
+
+    width:320px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    background:#fff;
+
+    padding:13px 18px;
+
+    border-radius:14px;
+
+    border:1px solid #e2e8f0;
+
+    box-shadow:0 5px 15px rgba(15,23,42,.05);
+
+}
+
+.search-box svg{
+
+    color:#2563eb;
+
+    font-size:18px;
+
+}
+
+.search-box input{
+
+    flex:1;
+
+    border:none;
+
+    outline:none;
+
+    background:transparent;
+
+    font-size:15px;
+
+}
+
+/*=========================================
+Statistics
+=========================================*/
+
+.recommendation-stats{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:20px;
+
+}
+
+.recommendation-stat-card{
+
+    background:#fff;
+
+    border-radius:18px;
+
+    padding:24px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    border:1px solid #e5e7eb;
+
+    box-shadow:0 8px 25px rgba(15,23,42,.05);
+
+    transition:.3s;
+
+}
+
+.recommendation-stat-card:hover{
+
+    transform:translateY(-5px);
+
+}
+
+.recommendation-stat-card svg{
+
+    width:60px;
+
+    height:60px;
+
+    padding:15px;
+
+    border-radius:15px;
+
+    background:#2563eb;
+
+    color:#fff;
+
+    font-size:26px;
+
+}
+
+.recommendation-stat-card h2{
+
+    font-size:30px;
+
+    color:#0f172a;
+
+    margin-bottom:5px;
+
+}
+
+.recommendation-stat-card span{
+
+    color:#64748b;
+
+    font-size:14px;
+
+}
+/*=========================================
+Recommendation Table
+=========================================*/
+
+.recommendation-table{
+
+    width:100%;
+
+    background:#fff;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    border:1px solid #e5e7eb;
+
+    box-shadow:0 10px 30px rgba(15,23,42,.05);
+
+}
+
+.recommendation-table table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+.recommendation-table thead{
+
+    background:#f8fafc;
+
+}
+
+.recommendation-table th{
+
+    padding:18px 22px;
+
+    text-align:left;
+
+    font-size:14px;
+
+    color:#64748b;
+
+    font-weight:700;
+
+    border-bottom:1px solid #e5e7eb;
+
+}
+
+.recommendation-table td{
+
+    padding:18px 22px;
+
+    border-bottom:1px solid #f1f5f9;
+
+    vertical-align:middle;
+
+}
+
+.recommendation-table tbody tr{
+
+    transition:.25s;
+
+}
+
+.recommendation-table tbody tr:hover{
+
+    background:#f8fbff;
+
+}
+
+.recommendation-table tbody tr:last-child td{
+
+    border-bottom:none;
+
+}
+
+/*=========================================
+Student Cell
+=========================================*/
+
+.student-cell{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+}
+
+.student-avatar{
+
+    width:48px;
+
+    height:48px;
+
+    border-radius:50%;
+
+    background:linear-gradient(135deg,#2563eb,#3b82f6);
+
+    color:#fff;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    flex-shrink:0;
+
+}
+
+.student-cell h4{
+
+    color:#0f172a;
+
+    font-size:16px;
+
+    margin-bottom:4px;
+
+}
+
+.student-cell p{
+
+    color:#64748b;
+
+    font-size:13px;
+
+}
+
+/*=========================================
+Badges
+=========================================*/
+
+.match-badge{
+
+    display:inline-block;
+
+    background:#dbeafe;
+
+    color:#1d4ed8;
+
+    padding:7px 16px;
+
+    border-radius:30px;
+
+    font-size:13px;
+
+    font-weight:700;
+
+}
+
+.progress-badge{
+
+    display:inline-block;
+
+    background:#dcfce7;
+
+    color:#15803d;
+
+    padding:7px 16px;
+
+    border-radius:30px;
+
+    font-size:13px;
+
+    font-weight:700;
+
+}
+/*=========================================
+Action Buttons
+=========================================*/
+
+.action-buttons{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+}
+
+.view-btn,
+.delete-btn{
+
+    width:40px;
+
+    height:40px;
+
+    border:none;
+
+    border-radius:10px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    font-size:15px;
+
+}
+
+.view-btn{
+
+    background:#dbeafe;
+
+    color:#2563eb;
+
+}
+
+.view-btn:hover{
+
+    background:#2563eb;
+
+    color:#fff;
+
+}
+
+.delete-btn{
+
+    background:#fee2e2;
+
+    color:#dc2626;
+
+}
+
+.delete-btn:hover{
+
+    background:#dc2626;
+
+    color:#fff;
+
+}
+
+/*=========================================
+Empty State
+=========================================*/
+
+.empty-row{
+
+    text-align:center;
+
+    padding:45px;
+
+    color:#94a3b8;
+
+    font-size:16px;
+
+    font-weight:600;
+
+}
+
+/*=========================================
+Responsive
+=========================================*/
+
+@media(max-width:1100px){
+
+.recommendation-stats{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:900px){
+
+.recommendation-header{
+
+flex-direction:column;
+
+align-items:flex-start;
+
+}
+
+.search-box{
+
+width:100%;
+
+}
+
+.recommendation-table{
+
+overflow-x:auto;
+
+}
+
+.recommendation-table table{
+
+min-width:850px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.recommendation-stats{
+
+grid-template-columns:1fr;
+
+}
+
+.recommendation-stat-card{
+
+padding:20px;
+
+}
+
+.recommendation-stat-card h2{
+
+font-size:26px;
+
+}
+
+.recommendation-header h1{
+
+font-size:26px;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.recommendation-page{
+
+gap:20px;
+
+}
+
+.recommendation-header h1{
+
+font-size:22px;
+
+}
+
+.search-box{
+
+padding:12px 14px;
+
+}
+
+.recommendation-stat-card{
+
+padding:18px;
+
+}
+
+.student-avatar{
+
+width:42px;
+
+height:42px;
+
+font-size:16px;
+
+}
+
+.student-cell h4{
+
+font-size:14px;
+
+}
+
+.student-cell p{
+
+font-size:12px;
+
+}
+
+.view-btn,
+.delete-btn{
+
+width:36px;
+
+height:36px;
+
+}
+
+.match-badge,
+.progress-badge{
+
+padding:6px 12px;
+
+font-size:12px;
+
+}
+
+}

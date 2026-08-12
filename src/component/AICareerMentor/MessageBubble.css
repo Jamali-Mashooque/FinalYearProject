@@ -1,0 +1,697 @@
+/* ==========================================
+   ROW
+========================================== */
+
+.message-row{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:15px;
+
+    width:100%;
+
+}
+
+.message-row.ai{
+
+    justify-content:flex-start;
+
+}
+
+.message-row.user{
+
+    justify-content:flex-end;
+
+}
+
+/* ==========================================
+   AVATAR
+========================================== */
+
+.bubble-avatar{
+
+    width:42px;
+    height:42px;
+
+    border-radius:50%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    flex-shrink:0;
+
+    color:#fff;
+
+    font-size:18px;
+
+}
+
+.ai-avatar{
+
+    background:linear-gradient(135deg,#6366F1,#8B5CF6);
+
+}
+
+.user-avatar{
+
+    background:#111827;
+
+}
+
+/* ==========================================
+   MESSAGE
+========================================== */
+
+.message{
+
+    max-width:82%;
+
+}
+
+.message.ai{
+
+    text-align:left;
+
+}
+
+.message.user{
+
+    text-align:right;
+
+}
+
+/* ==========================================
+   IMPORTANT
+========================================== */
+
+.message-content{
+
+    background:transparent !important;
+
+    box-shadow:none !important;
+
+    border:none !important;
+
+    padding:0 !important;
+
+}
+
+/* ==========================================
+   TEXT
+========================================== */
+
+.message-content p{
+
+    margin:0 0 15px;
+
+    color:#111827;
+
+    font-size:17px;
+
+    line-height:1.9;
+
+}
+
+.message-content h1{
+
+    font-size:34px;
+
+    margin:22px 0;
+
+}
+
+.message-content h2{
+
+    font-size:28px;
+
+    margin:20px 0;
+
+}
+
+.message-content h3{
+
+    font-size:22px;
+
+    margin:18px 0;
+
+}
+
+.message-content ul{
+
+    padding-left:24px;
+
+    margin:18px 0;
+
+}
+
+.message-content ol{
+
+    padding-left:24px;
+
+    margin:18px 0;
+
+}
+
+.message-content li{
+
+    margin-bottom:10px;
+
+    line-height:1.8;
+
+}
+
+.message-content strong{
+
+    font-weight:700;
+
+}
+
+.message-content code{
+
+    background:#EEF2FF;
+
+    padding:4px 8px;
+
+    border-radius:6px;
+
+    color:#4338CA;
+
+}
+
+.message-content pre{
+
+    background:#111827;
+
+    color:white;
+
+    padding:18px;
+
+    border-radius:12px;
+
+    overflow:auto;
+
+    margin:18px 0;
+
+}
+
+.message-content pre code{
+
+    background:none;
+
+    padding:0;
+
+    color:inherit;
+
+}
+
+/* ==========================================
+   TIME
+========================================== */
+
+.message-footer{
+
+    margin-top:8px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:12px;
+
+}
+
+.message.user .message-footer{
+
+    justify-content:flex-end;
+
+}
+
+.message-time{
+
+    font-size:12px;
+
+    color:#9CA3AF;
+
+}
+
+/* ==========================================
+   MESSAGE ACTIONS (copy / edit / retry)
+========================================== */
+
+.message-actions{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:6px;
+
+    opacity:0;
+
+    transition:opacity .15s ease;
+
+}
+
+.message-row:hover .message-actions{
+
+    opacity:1;
+
+}
+
+.msg-action-btn{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:6px;
+
+    border:none;
+
+    background:#F3F4F6;
+
+    color:#6B7280;
+
+    border-radius:8px;
+
+    width:30px;
+
+    height:30px;
+
+    padding:0;
+
+    font-size:13px;
+
+    cursor:pointer;
+
+    transition:.2s;
+
+}
+
+.msg-action-btn:hover{
+
+    background:#E5E7EB;
+
+    color:#111827;
+
+}
+
+.msg-retry-btn{
+
+    width:auto;
+
+    padding:0 12px;
+
+    background:#FEF2F2;
+
+    color:#DC2626;
+
+    font-size:13px;
+
+    font-weight:600;
+
+}
+
+.msg-retry-btn:hover{
+
+    background:#FEE2E2;
+
+    color:#B91C1C;
+
+}
+
+/* ==========================================
+   EDIT MESSAGE
+========================================== */
+
+.edit-box{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:10px;
+
+    min-width:260px;
+
+}
+
+.edit-textarea{
+
+    width:100%;
+
+    min-height:70px;
+
+    max-height:240px;
+
+    resize:vertical;
+
+    border:1px solid #D1D5DB;
+
+    border-radius:12px;
+
+    padding:12px 14px;
+
+    font-family:inherit;
+
+    font-size:16px;
+
+    line-height:1.6;
+
+    color:#111827;
+
+    outline:none;
+
+    background:#fff;
+
+}
+
+.edit-textarea:focus{
+
+    border-color:#4F46E5;
+
+    box-shadow:0 0 0 3px rgba(79,70,229,.12);
+
+}
+
+.edit-actions{
+
+    display:flex;
+
+    justify-content:flex-end;
+
+    gap:10px;
+
+}
+
+.edit-cancel-btn,
+.edit-save-btn{
+
+    border:none;
+
+    border-radius:10px;
+
+    padding:8px 16px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.2s;
+
+}
+
+.edit-cancel-btn{
+
+    background:#F3F4F6;
+
+    color:#374151;
+
+}
+
+.edit-cancel-btn:hover{
+
+    background:#E5E7EB;
+
+}
+
+.edit-save-btn{
+
+    background:#4F46E5;
+
+    color:#fff;
+
+}
+
+.edit-save-btn:hover{
+
+    background:#4338CA;
+
+}
+
+/* ==========================================
+   CODE BLOCK (with copy button)
+========================================== */
+
+.code-block-wrapper{
+
+    margin:15px 0;
+
+    border-radius:12px;
+
+    overflow:hidden;
+
+    border:1px solid #1f2937;
+
+}
+
+.code-block-header{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    background:#1f2937;
+
+    color:#e5e7eb;
+
+    padding:8px 14px;
+
+    font-size:12px;
+
+    text-transform:uppercase;
+
+    letter-spacing:.04em;
+
+}
+
+.code-block-lang{
+
+    color:#9CA3AF;
+
+}
+
+.code-copy-btn{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:6px;
+
+    border:none;
+
+    background:transparent;
+
+    color:#E5E7EB;
+
+    cursor:pointer;
+
+    font-size:12px;
+
+    padding:4px 8px;
+
+    border-radius:6px;
+
+    transition:.2s;
+
+    text-transform:none;
+
+}
+
+.code-copy-btn:hover{
+
+    background:rgba(255,255,255,.1);
+
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media(max-width:992px){
+
+.message{
+
+max-width:90%;
+
+}
+
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media(max-width:768px){
+
+.message-actions{
+
+opacity:1;
+
+}
+
+.message-row{
+
+gap:10px;
+
+}
+
+.bubble-avatar{
+
+width:36px;
+height:36px;
+
+font-size:15px;
+
+}
+
+.message{
+
+max-width:100%;
+
+}
+
+.message-content p{
+
+font-size:15px;
+
+}
+
+.message-content h1{
+
+font-size:24px;
+
+}
+
+.message-content h2{
+
+font-size:21px;
+
+}
+
+.message-content h3{
+
+font-size:18px;
+
+}
+
+.message-content li{
+
+font-size:15px;
+
+}
+
+}
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media(max-width:480px){
+
+.message-content p{
+
+font-size:14px;
+
+line-height:1.8;
+
+}
+
+.message-content li{
+
+font-size:14px;
+
+}
+
+}
+.ai-paragraph{
+    color:#111827 !important;
+    font-size:20px;
+    line-height:1.9;
+    margin-bottom:14px;
+}
+
+.ai-heading{
+    color:#111827 !important;
+    font-weight:700;
+}
+
+.ai-list{
+    color:#111827 !important;
+}
+
+/* .message-content *{
+    color:#111827 !important;
+} */
+
+.message-content a{
+    color:#2563eb !important;
+}
+/* ===========================================
+Markdown Styling
+=========================================== */
+
+.message-content pre{
+    background:#0f172a;
+    color:#fff;
+    padding:18px;
+    border-radius:12px;
+    overflow-x:auto;
+    margin:15px 0;
+}
+
+.message-content code{
+    color:#facc15;
+    font-family:Consolas,monospace;
+}
+
+.message-content h1,
+.message-content h2,
+.message-content h3{
+    margin:15px 0;
+    color:#2563eb;
+}
+
+.message-content p{
+    margin:10px 0;
+    line-height:1.7;
+}
+
+.message-content ul{
+    padding-left:25px;
+    margin:12px 0;
+}
+
+.message-content li{
+    margin:8px 0;
+}
+
+.message-content strong{
+    color:#2563eb;
+}
+
+.message-content table{
+    width:100%;
+    border-collapse:collapse;
+    margin:15px 0;
+}
+
+.message-content table td,
+.message-content table th{
+    border:1px solid #ddd;
+    padding:10px;
+}

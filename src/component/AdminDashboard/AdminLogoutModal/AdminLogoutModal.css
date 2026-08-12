@@ -1,0 +1,229 @@
+.logout-overlay{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.45);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:9999;
+
+    backdrop-filter:blur(4px);
+
+}
+
+.logout-modal{
+
+    width:420px;
+
+    background:#fff;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    animation:popup .35s ease;
+
+    box-shadow:0 20px 60px rgba(0,0,0,.25);
+
+}
+
+.logout-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:20px 25px;
+
+    border-bottom:1px solid #eee;
+
+}
+
+.logout-header h2{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    font-size:22px;
+
+    color:#0f172a;
+
+}
+
+.logout-header svg{
+
+    color:#2563eb;
+
+}
+
+.logout-header button{
+
+    border:none;
+
+    background:none;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    color:#64748b;
+
+}
+
+.logout-body{
+
+    text-align:center;
+
+    padding:35px 25px;
+
+}
+
+.logout-icon{
+
+    width:80px;
+
+    height:80px;
+
+    margin:auto;
+
+    background:#fee2e2;
+
+    color:#dc2626;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:34px;
+
+    margin-bottom:20px;
+
+}
+
+.logout-body h3{
+
+    font-size:24px;
+
+    margin-bottom:10px;
+
+    color:#0f172a;
+
+}
+
+.logout-body p{
+
+    color:#64748b;
+
+    line-height:1.7;
+
+}
+
+.logout-footer{
+
+    display:flex;
+
+    gap:15px;
+
+    padding:25px;
+
+}
+
+.logout-footer button{
+
+    flex:1;
+
+    height:50px;
+
+    border:none;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.cancel-btn{
+
+    background:#e2e8f0;
+
+    color:#334155;
+
+}
+
+.cancel-btn:hover{
+
+    background:#cbd5e1;
+
+}
+
+.logout-btn{
+
+    background:#dc2626;
+
+    color:#fff;
+
+}
+
+.logout-btn:hover{
+
+    background:#b91c1c;
+
+}
+
+@keyframes popup{
+
+from{
+
+opacity:0;
+
+transform:scale(.8);
+
+}
+
+to{
+
+opacity:1;
+
+transform:scale(1);
+
+}
+
+}
+
+@media(max-width:500px){
+
+.logout-modal{
+
+width:92%;
+
+}
+
+.logout-footer{
+
+flex-direction:column;
+
+}
+
+}

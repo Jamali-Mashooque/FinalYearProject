@@ -1,0 +1,303 @@
+/*==================================
+Academic Detail
+==================================*/
+
+.academic{
+    width:100%;
+    animation:fadeIn .4s ease;
+}
+
+.academic h3{
+    font-size:28px;
+    color:#0f172a;
+    margin-bottom:10px;
+}
+
+.academic>p{
+    color:#64748b;
+    line-height:1.7;
+    margin-bottom:35px;
+}
+
+/*==================================
+Card
+==================================*/
+
+.academic-card{
+    background:#fff;
+    border:1px solid #e2e8f0;
+    border-radius:18px;
+    padding:28px;
+    margin-bottom:30px;
+    transition:.3s;
+}
+
+.academic-card:hover{
+    border-color:#2563eb;
+    box-shadow:0 10px 30px rgba(37,99,235,.08);
+}
+
+.academic-card h4{
+    display:flex;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:8px;
+    color:#0f172a;
+    font-size:20px;
+    margin-bottom:25px;
+}
+
+.academic-card h4 span{
+    color:#ef4444;
+    font-size:14px;
+    font-weight:600;
+}
+
+.academic-card h4 small{
+    color:#64748b;
+    font-size:14px;
+    font-weight:500;
+}
+
+/*==================================
+Grid
+==================================*/
+
+.academic-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+/*==================================
+Input
+==================================*/
+
+.input-group{
+    margin-bottom:20px;
+}
+
+.input-group label{
+    display:block;
+    margin-bottom:10px;
+    font-weight:600;
+    color:#334155;
+}
+
+.input-box{
+    position:relative;
+}
+
+.input-box svg{
+    position:absolute;
+    left:18px;
+    top:50%;
+    transform:translateY(-50%);
+    color:#2563eb;
+    font-size:18px;
+    pointer-events:none;
+}
+
+/*==================================
+Input + Select
+==================================*/
+
+.input-box input,
+.input-box select{
+    width:100%;
+    height:56px;
+    padding-left:55px;
+    padding-right:18px;
+    border:1px solid #d1d5db;
+    border-radius:12px;
+    outline:none;
+    background:#fff;
+    font-size:15px;
+    color:#0f172a;
+    transition:.3s;
+}
+
+.input-box input::placeholder{
+    color:#94a3b8;
+}
+
+.input-box select{
+    appearance:none;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    cursor:pointer;
+}
+
+.input-box input:focus,
+.input-box select:focus{
+    border-color:#2563eb;
+    box-shadow:0 0 0 4px rgba(37,99,235,.12);
+}
+
+.input-box select option{
+    color:#0f172a;
+    background:#fff;
+}
+
+/*==================================
+Status
+==================================*/
+
+.status-group{
+    margin-top:20px;
+}
+
+.status-group>label{
+    display:block;
+    margin-bottom:14px;
+    font-weight:600;
+    color:#334155;
+}
+
+.status-options{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.status-options label{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    cursor:pointer;
+    padding:12px 18px;
+    border:1px solid #dbe3ef;
+    border-radius:10px;
+    transition:.3s;
+    color:#475569;
+}
+
+.status-options label:hover{
+    border-color:#2563eb;
+    background:#eff6ff;
+}
+
+.status-options input{
+    accent-color:#2563eb;
+    width:18px;
+    height:18px;
+}
+
+/*==================================
+Animation
+==================================*/
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+/*==================================
+Tablet
+==================================*/
+
+@media(max-width:992px){
+
+.academic-grid{
+    grid-template-columns:1fr;
+}
+
+}
+
+/*==================================
+Mobile
+==================================*/
+
+@media(max-width:768px){
+
+.academic h3{
+    font-size:24px;
+}
+
+.academic>p{
+    font-size:15px;
+}
+
+.academic-card{
+    padding:22px;
+}
+
+.academic-card h4{
+    font-size:18px;
+}
+
+.input-box input,
+.input-box select{
+    height:52px;
+    font-size:14px;
+}
+
+.input-box svg{
+    left:16px;
+    font-size:17px;
+}
+
+.status-options{
+    flex-direction:column;
+    gap:12px;
+}
+
+.status-options label{
+    width:100%;
+}
+
+}
+
+/*==================================
+Small Mobile
+==================================*/
+
+@media(max-width:480px){
+
+.academic{
+    padding:0;
+}
+
+.academic h3{
+    font-size:22px;
+}
+
+.academic>p{
+    font-size:14px;
+}
+
+.academic-card{
+    padding:18px;
+    border-radius:15px;
+}
+
+.academic-card h4{
+    font-size:17px;
+}
+
+.input-box input,
+.input-box select{
+    height:50px;
+    padding-left:50px;
+}
+
+.input-box svg{
+    left:15px;
+    font-size:16px;
+}
+
+.status-options label{
+    padding:10px 14px;
+    font-size:14px;
+}
+
+}

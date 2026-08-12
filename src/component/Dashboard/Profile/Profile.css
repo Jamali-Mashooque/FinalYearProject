@@ -1,0 +1,723 @@
+/*==================================================
+PROFILE PAGE
+==================================================*/
+
+.profile-page{
+    width:100%;
+    animation:fadeIn .4s ease;
+}
+
+/*==================================================
+HEADER
+==================================================*/
+
+.profile-header{
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    gap:25px;
+
+    background:#fff;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.05);
+
+    margin-bottom:30px;
+
+}
+
+.profile-avatar{
+
+    width:90px;
+    height:90px;
+
+    min-width:90px;
+
+    border-radius:50%;
+
+    background:linear-gradient(135deg,#2563eb,#06b6d4);
+
+    color:#fff;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:34px;
+    font-weight:700;
+
+}
+
+.profile-header>div:nth-child(2){
+
+    flex:1;
+
+}
+
+.profile-header h2{
+
+    font-size:30px;
+
+    color:#0f172a;
+
+    margin-bottom:8px;
+
+}
+
+.profile-header p{
+
+    color:#475569;
+
+    margin-bottom:6px;
+
+}
+
+.profile-header span{
+
+    color:#64748b;
+
+    font-size:14px;
+
+}
+
+.profile-header button{
+
+    border:none;
+
+    outline:none;
+
+    background:#2563eb;
+
+    color:#fff;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    gap:10px;
+
+    padding:14px 24px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.profile-header button:hover{
+
+    background:#1d4ed8;
+
+}
+
+/*==================================================
+CARDS
+==================================================*/
+
+.profile-card{
+
+    background:#fff;
+
+    padding:28px;
+
+    border-radius:18px;
+
+    margin-bottom:25px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.05);
+
+}
+
+.profile-card h3{
+
+    color:#0f172a;
+
+    font-size:22px;
+
+    margin-bottom:24px;
+
+}
+
+/*==================================================
+GRID
+==================================================*/
+
+.profile-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:22px;
+
+}
+
+.profile-grid>div{
+
+    background:#f8fafc;
+
+    padding:22px;
+
+    border-radius:16px;
+
+    transition:.3s;
+
+}
+
+.profile-grid>div:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 10px 25px rgba(37,99,235,.08);
+
+}
+
+.profile-grid svg{
+
+    color:#2563eb;
+
+    font-size:22px;
+
+    margin-bottom:14px;
+
+}
+
+.profile-grid span{
+
+    display:block;
+
+    color:#64748b;
+
+    font-size:13px;
+
+    margin-bottom:8px;
+
+}
+
+.profile-grid p{
+
+    font-size:16px;
+
+    font-weight:600;
+
+    color:#0f172a;
+
+}
+
+/*==================================================
+EDIT MODE
+==================================================*/
+
+.profile-header input,
+.profile-grid input,
+.profile-grid select,
+.experience-box input,
+.experience-box select{
+
+    width:100%;
+
+    margin-top:8px;
+
+    height:48px;
+
+    border:2px solid #e2e8f0;
+
+    border-radius:12px;
+
+    padding:0 16px;
+
+    background:#fff;
+
+    color:#0f172a;
+
+    font-size:15px;
+
+    transition:.3s;
+
+    outline:none;
+
+}
+
+.profile-header input:focus,
+.profile-grid input:focus,
+.profile-grid select:focus,
+.experience-box input:focus,
+.experience-box select:focus{
+
+    border-color:#2563eb;
+
+    box-shadow:0 0 0 4px rgba(37,99,235,.12);
+
+}
+
+/*==================================================
+SKILLS
+==================================================*/
+
+.skills{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:14px;
+
+}
+
+.skills span{
+
+    background:#2563eb;
+
+    color:#fff;
+
+    padding:10px 18px;
+
+    border-radius:30px;
+
+    font-size:14px;
+
+    font-weight:500;
+
+    transition:.3s;
+
+}
+
+.skills span:hover{
+
+    background:#1d4ed8;
+
+}
+
+.empty-text{
+
+    color:#94a3b8;
+
+    font-style:italic;
+
+    font-size:14px;
+
+}
+
+/*==================================================
+SAVE BUTTON
+==================================================*/
+
+.save-btn{
+
+    margin-top:10px;
+
+    border:none;
+
+    background:#2563eb;
+
+    color:#fff;
+
+    padding:14px 35px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.save-btn:hover{
+
+    background:#1d4ed8;
+
+}
+
+/*==================================================
+ANIMATION
+==================================================*/
+
+@keyframes fadeIn{
+
+from{
+
+opacity:0;
+
+transform:translateY(20px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+/*==================================================
+EXPERIENCE SECTION
+==================================================*/
+
+.experience-box{
+
+    display:flex;
+    align-items:flex-start;
+    gap:20px;
+
+    background:#f8fafc;
+
+    padding:25px;
+
+    border-radius:16px;
+
+}
+
+.experience-box svg{
+
+    font-size:42px;
+
+    color:#2563eb;
+
+    margin-top:4px;
+
+}
+
+.experience-box>div{
+
+    flex:1;
+
+}
+
+.experience-box h4{
+
+    font-size:20px;
+
+    color:#0f172a;
+
+    margin-bottom:10px;
+
+}
+
+.experience-box p{
+
+    color:#64748b;
+
+    line-height:1.7;
+
+    margin-bottom:10px;
+
+}
+
+.experience-box label{
+
+    display:block;
+
+    margin-top:16px;
+    margin-bottom:8px;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    color:#475569;
+
+}
+
+/*==================================================
+HEADER INPUT SPACING
+==================================================*/
+
+.profile-header input{
+
+    margin-bottom:12px;
+
+}
+
+.profile-header input:last-child{
+
+    margin-bottom:0;
+
+}
+
+/*==================================================
+CARD INPUTS
+==================================================*/
+
+.profile-grid input,
+.profile-grid select{
+
+    margin-top:10px;
+
+}
+
+.profile-grid input::placeholder{
+
+    color:#94a3b8;
+
+}
+
+.experience-box input::placeholder{
+
+    color:#94a3b8;
+
+}
+
+/*==================================================
+SCROLLBAR (OPTIONAL)
+==================================================*/
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#cbd5e1;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#94a3b8;
+
+}
+
+/*==================================================
+RESPONSIVE
+==================================================*/
+
+@media(max-width:992px){
+
+.profile-header{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+}
+
+.profile-avatar{
+
+    width:80px;
+    height:80px;
+
+    min-width:80px;
+
+    font-size:30px;
+
+}
+
+.profile-header>div:nth-child(2){
+
+    width:100%;
+
+}
+
+.profile-header button{
+
+    width:100%;
+
+}
+
+.profile-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.profile-page{
+
+    padding:0;
+
+}
+
+.profile-header{
+
+    padding:22px;
+
+    gap:18px;
+
+}
+
+.profile-card{
+
+    padding:22px;
+
+}
+
+.profile-header h2{
+
+    font-size:24px;
+
+}
+
+.profile-card h3{
+
+    font-size:20px;
+
+}
+
+.profile-grid{
+
+    gap:18px;
+
+}
+
+.profile-grid>div{
+
+    padding:18px;
+
+}
+
+.skills{
+
+    gap:10px;
+
+}
+
+.skills span{
+
+    font-size:13px;
+
+    padding:8px 14px;
+
+}
+
+.experience-box{
+
+    flex-direction:column;
+
+}
+
+.experience-box svg{
+
+    font-size:36px;
+
+}
+
+.save-btn{
+
+    width:100%;
+
+}
+
+}
+
+@media(max-width:576px){
+
+.profile-header{
+
+    padding:18px;
+
+}
+
+.profile-avatar{
+
+    width:70px;
+    height:70px;
+
+    min-width:70px;
+
+    font-size:26px;
+
+}
+
+.profile-header h2{
+
+    font-size:21px;
+
+}
+
+.profile-card{
+
+    padding:18px;
+
+}
+
+.profile-grid>div{
+
+    padding:16px;
+
+}
+
+.profile-grid svg{
+
+    font-size:20px;
+
+}
+
+.profile-grid p{
+
+    font-size:15px;
+
+}
+
+.skills{
+
+    gap:8px;
+
+}
+
+.skills span{
+
+    font-size:12px;
+
+    padding:8px 12px;
+
+}
+
+.profile-header input,
+.profile-grid input,
+.profile-grid select,
+.experience-box input,
+.experience-box select{
+
+    height:44px;
+
+    font-size:14px;
+
+}
+
+.experience-box{
+
+    padding:18px;
+
+    text-align:center;
+
+    align-items:center;
+
+}
+
+.experience-box>div{
+
+    width:100%;
+
+}
+
+.save-btn{
+
+    padding:13px 20px;
+
+    font-size:14px;
+
+}
+
+}

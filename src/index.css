@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #f8fafc;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.header {
+    width: 100%;
+    background: #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, .08);
+}
+
+.navbar {
+    height: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h2 {
+    color: #2563eb;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+/* Navigation */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: #333;
+    font-size: 17px;
+    font-weight: 500;
+    transition: .3s;
+}
+
+.nav-links a:hover {
+    color: #2563eb;
+}
+
+/* Login Button */
+
+.login-link {
+    padding: 11px 24px;
+    border: 2px solid #2563eb;
+    border-radius: 8px;
+    color: #2563eb !important;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.login-link:hover {
+    background: #718fd1;
+    color: black !important;
+}
+
+/* Register Button */
+
+.register-btn {
+    background: #2563eb;
+    color: #fff !important;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.register-btn:hover {
+    background: #1d4ed8;
+}
+
+/* Hamburger */
+
+.menu-icon {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #2563eb;
+}
+
+/* ===========================
+        Mobile
+=========================== */
+
+@media (max-width:768px) {
+
+    .nav-links {
+        position: absolute;
+        top: 75px;
+        left: -100%;
+        width: 100%;
+        background: #fff;
+        flex-direction: column;
+        gap: 25px;
+        padding: 35px 0;
+        transition: .4s;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, .08);
+    }
+
+    .nav-links.active {
+        left: 0;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .login-link,
+    .register-btn {
+        width: 200px;
+        text-align: center;
+    }
+}

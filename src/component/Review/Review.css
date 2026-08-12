@@ -1,0 +1,300 @@
+/*==========================
+Review
+==========================*/
+
+.review{
+    width:100%;
+    animation:fadeIn .35s ease;
+}
+
+.review h3{
+    font-size:28px;
+    color:#0f172a;
+    margin-bottom:10px;
+}
+
+.review>p{
+    color:#64748b;
+    line-height:1.7;
+    margin-bottom:35px;
+}
+
+/*==========================
+Review Card
+==========================*/
+
+.review-card{
+
+    background:#fff;
+
+    border:1px solid #e2e8f0;
+
+    border-radius:18px;
+
+    padding:25px;
+
+    margin-bottom:25px;
+
+    transition:.3s;
+
+}
+
+.review-card:hover{
+
+    border-color:#2563eb;
+
+    box-shadow:0 10px 25px rgba(37,99,235,.08);
+
+}
+
+.review-title{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-bottom:20px;
+
+}
+
+.review-title svg{
+
+    color:#2563eb;
+
+    font-size:22px;
+
+}
+
+.review-title h4{
+
+    font-size:20px;
+
+    color:#0f172a;
+
+}
+
+/*==========================
+Review Grid
+==========================*/
+
+.review-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:20px;
+
+}
+
+.review-grid div{
+
+    background:#f8fafc;
+
+    border:1px solid #e2e8f0;
+
+    border-radius:12px;
+
+    padding:15px;
+
+}
+
+.review-grid span{
+
+    display:block;
+
+    font-size:13px;
+
+    color:#64748b;
+
+    margin-bottom:6px;
+
+}
+
+.review-grid p{
+
+    font-size:15px;
+
+    color:#0f172a;
+
+    font-weight:600;
+
+    word-break:break-word;
+
+}
+
+/*==========================
+Checkbox
+==========================*/
+
+.checkbox{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:12px;
+
+    margin-top:30px;
+
+}
+
+.checkbox input{
+
+    width:18px;
+
+    height:18px;
+
+    margin-top:3px;
+
+    accent-color:#2563eb;
+
+    cursor:pointer;
+
+}
+
+.checkbox label{
+
+    color:#334155;
+
+    line-height:1.6;
+
+    cursor:pointer;
+
+}
+
+/*==========================
+Verification Note
+==========================*/
+
+.verify-note{
+
+    margin-top:30px;
+
+    background:#eff6ff;
+
+    border-left:5px solid #2563eb;
+
+    padding:20px;
+
+    border-radius:12px;
+
+}
+
+.verify-note h4{
+
+    color:#1d4ed8;
+
+    margin-bottom:10px;
+
+    font-size:18px;
+
+}
+
+.verify-note p{
+
+    color:#475569;
+
+    line-height:1.7;
+
+    margin:0;
+
+}
+
+/*==========================
+Animation
+==========================*/
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*==========================
+Responsive
+==========================*/
+
+@media(max-width:768px){
+
+.review h3{
+
+font-size:24px;
+
+}
+
+.review-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.review-card{
+
+padding:20px;
+
+}
+
+.review-title h4{
+
+font-size:18px;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.review h3{
+
+font-size:22px;
+
+}
+
+.review>p{
+
+font-size:14px;
+
+}
+
+.review-card{
+
+padding:18px;
+
+}
+
+.review-grid p{
+
+font-size:14px;
+
+}
+
+.verify-note{
+
+padding:16px;
+
+}
+
+.verify-note h4{
+
+font-size:16px;
+
+}
+
+}
