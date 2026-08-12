@@ -20,7 +20,7 @@ import {
 import Footer from "../Footer/Footer";
 
 const Home = () => {
-  const navigate = useNvigate();
+  const navigate = useNavigate();
 
 const scrollToFeatures = () => {
 
