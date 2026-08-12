@@ -3,8 +3,6 @@ import { useNavigate } from "react-router-dom";
 import { registerUser } from "../../api/authApi";
 import "./Register.css";
 
-import registerBg from "../../assets/Register/register-bg.png";
-
 import ProgressBar from "../ProgressBar/ProgressBar";
 import PersonalDetail from "../PersonalInfo/PersonalDetail";
 import AcademicDetail from "../Academic/AcademicDetail";

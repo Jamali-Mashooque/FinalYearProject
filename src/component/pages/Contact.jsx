@@ -17,7 +17,7 @@ FaHeadset,
 FaQuestionCircle
 
 } from "react-icons/fa";
-import Footer from "../footer/Footer";
+import Footer from "../Footer/Footer";
 
 const Contact = () => {
 

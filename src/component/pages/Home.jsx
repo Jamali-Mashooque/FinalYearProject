@@ -17,10 +17,10 @@ import {
   FaAward,
   FaLightbulb,
 } from "react-icons/fa";
-import Footer from "../footer/Footer";
+import Footer from "../Footer/Footer";
 
 const Home = () => {
-  const navigate = useNavigate();
+  const navigate = useNvigate();
 
 const scrollToFeatures = () => {
 
