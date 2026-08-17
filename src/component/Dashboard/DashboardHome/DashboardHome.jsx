@@ -141,7 +141,7 @@ const DashboardHome = () => {
             <span>
               {student?.fullName || " Student"}
             </span>
-            👋
+            
           </h1>
 
           <p>

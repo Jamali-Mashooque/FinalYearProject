@@ -148,7 +148,7 @@ const Footer = () => {
               <FaEnvelope />
 
               <span>
-                support@aicareer.com
+                jamalimashooq39@gmail.com
               </span>
 
             </li>
@@ -158,7 +158,7 @@ const Footer = () => {
               <FaPhoneAlt />
 
               <span>
-                +92 300 1234567
+                +92 3063949769
               </span>
 
             </li>
@@ -168,7 +168,7 @@ const Footer = () => {
               <FaMapMarkerAlt />
 
               <span>
-                Karachi, Pakistan
+                Hyderabad, Pakistan
               </span>
 
             </li>

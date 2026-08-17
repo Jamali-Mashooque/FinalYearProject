@@ -94,8 +94,7 @@ const Header = ({
               ? `, ${user.fullName.split(" ")[0]}`
               : ""}
 
-            👋
-
+            
           </h2>
 
           <p>{today}</p>

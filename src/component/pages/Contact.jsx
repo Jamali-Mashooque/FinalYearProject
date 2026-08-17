@@ -34,13 +34,13 @@ text:"Sindh University Jamshoro, Pakistan"
 {
 icon:<FaPhoneAlt/>,
 title:"Phone",
-text:"+92 XXX XXXXXXX"
+text:"+92 3063949769"
 },
 
 {
 icon:<FaEnvelope/>,
 title:"Email",
-text:"support@aicareer.com"
+text:"jamalimashooq39@gmail.com"
 },
 
 {
